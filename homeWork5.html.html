@@ -1,0 +1,133 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+	<script>
+		/* Task 1 */
+
+		function isPalindrom(num) {
+			// debugger;
+			if (!(num > 0)) {
+				;
+				alert("Please Enter A Number");
+				return false;
+			}
+			var i = num.length;
+			var revNum = "";
+			for (var j = i; j >= 0; j--) {
+				revNum += num.charAt(j);
+			};
+			if (num == revNum) {
+				alert("The  Number Is A Palindrom");
+			}
+			else {
+				alert("The  Number Is Not A Palindrom")
+			}
+
+		}
+
+		// isPalindrom("32423");
+
+		/* Task 2 */
+
+
+
+		function checkMail(mail) {
+			// debugger;
+			var l = mail.length;
+			var atIndex = mail.indexOf("@");
+			var beforeAt = mail.slice(0, atIndex);
+			var afterAt = mail.slice(atIndex + 1, mail.length);
+			var dotIndex = afterAt.indexOf(".");
+			var ending = afterAt.slice(dotIndex + 1, afterAt.length);
+			var endinglen = ending.length;
+			if (!(l >= 5)) {
+				alert("The email must be at least 5 characters");
+			}
+			else if (atIndex == -1) {
+				alert("You must have the '@' sign in your mail");
+			}
+			else if (!(beforeAt.length > 1 && afterAt.length > 1)) {
+				alert("You must have at one character before and after the @ sign ");
+			}
+
+			else if (afterAt.indexOf(".") == -1) {
+				alert("You must have at least one dot after the @ sigh ");
+			}
+
+
+			else if (!(endinglen >= 2)) {
+				alert("You must have at least two charachters at the ending of the mail");
+			}
+			for (var i = 0; i < endinglen; i++) {
+				if (!((ending.charAt(i) >= "A" && ending.charAt(i) >= "Z") || (ending.charAt(i) >= "a" && ending.charAt(i) >= "a"))) {
+					alert("You must have at least two letters and not numbers or signs at the ending of the mail");
+				}
+			}
+
+		}
+		// checkMail("niv@gmail.!com");
+
+		/* Task 3 */
+
+		function triangle(n) {
+			// debugger;
+			var text = "&nbsp";
+			for (i = n - 1; i >= 0; i--) {
+
+				for (j = 0; j < n - i; j++) {
+					document.write(text);
+				}
+
+				for (k = 0; k < i + 1; k++) {
+					document.write(" * ");
+				}
+				document.write("</br>")
+			}
+		}
+		triangle(7);
+
+		/* Task 4 */
+
+		function dateDay(str, Number) {
+			// debugger;
+			var strDays = str.slice(0, 2);
+			var strDateleft = str.slice(2, str.length);
+			var dateMonth = str.slice(3, 5);
+			var dateMonthN = parseInt(dateMonth);
+			var dateYear = str.slice(6, str.length);
+			var dateYearN = parseInt(dateYear);
+			var strDaysN = parseInt(strDays);
+			var newDays = strDaysN + Number;
+			var newStr = newDays + strDateleft;
+			console.log(str + " + " + Number + " = ");
+			if (newDays <= 30) {
+				console.log(newStr);
+			}
+			else if (newDays > 30 && dateMonthN == 12) {
+				newDays = strDaysN + Number - 30;
+				dateMonthN = 1;
+				dateYearN++;
+				console.log(newDays + "." + dateMonthN + "." + dateYearN)
+			}
+			else if (newDays > 30) {
+				newDays = strDaysN + Number - 30;
+				dateMonthN++;
+				console.log(newDays + "." + dateMonthN + "." + dateYear);
+			}
+
+		}
+		dateDay("25.06.2020", 5);
+		dateDay("25.06.2020", 6);
+		dateDay("25.12.2020", 7);
+
+
+	</script>
+</body>
+
+
+
+</html>
