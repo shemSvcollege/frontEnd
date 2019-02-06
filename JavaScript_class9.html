@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link rel='stylesheet' href='JavaScript_class9.css' type='text/css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <script src="JavaScript_class9.js"></script>
+</head>
+
+<body>
+    <!--Q1-->
+    <!--
+    <style>
+        h2{
+            color: crimson;
+        }
+        
+        
+    </style>
+
+    <br>
+    <h2>Palindrome or not?</h2>
+    <a type="text"></a>Insert any number: </a><input type="text" name="n" id="N" />
+    <br>
+    <button onClick="Palindrome()" type="button" class="btn btn-outline-danger">Click to check!</button>
+
+    <script>
+        function Palindrome() {
+            var rem, temp, final = 0;
+            var number = Number(document.getElementById("N").value);
+
+            temp = number;
+            while (number > 0) {
+                rem = number % 10;
+                number = parseInt(number / 10);
+                final = final * 10 + rem;
+            }
+            if (final == temp) {
+                window.alert("True");
+            }
+            else {
+                window.alert("False");
+            }
+        }
+    </script>
+-->
+    <!--Q2-->
+
+    <!--   <style>
+        p{
+        color: indigo;
+        height: 10px;
+        font-style: italic;
+    }
+
+</style>
+    <p>Please insert an Email:</p>
+    <form id="email_form">
+        <input type="text" id="email">
+        <input type="submit">
+
+    </form>
+
+    <script>
+        function validateEmail() {
+            debugger;
+            var emailText = document.getElementById('email').value;
+            var pattern = /^[a-zA-Z0-9\-_]+(\.[a-zA-Z0-9\-_]+)*@[a-z0-9]+(\-[a-z0-9]+)*(\.[a-z0-9]+(\-[a-z0-9]+)*)*\.[a-z]{2,4}$/;
+            if (pattern.test(emailText)) {
+                return true;
+            } else {
+                alert('Unvalid email address: ' + emailText);
+                return false;
+            }
+        }
+
+        window.onload = function () {
+            document.getElementById('email_form').onsubmit = validateEmail;
+        }
+    </script>
+-->
+    <!--Q3-->
+
+ <!--   <script>
+       function MyTriangle(n) {
+			debugger;
+			var text = "&nbsp";
+			for (i = n - 1; i >= 0; i--) {
+				for (j = 0; j < n - i; j++) {
+					document.write(text);
+				}
+				for (k = 0; k < i + 1; k++) {
+					document.write(" * ");
+				}
+				document.write("</br>")
+			}
+		}
+		MyTriangle(7);
+
+    </script>
+    -->
+
+    <!--Q4-->
+    <!-- <script>
+
+        function dateDay(str, nnum) {
+            // debugger;
+            var strDays = str.slice(0, 2);
+            var strDateleft = str.slice(2, str.length);
+            var dateMonth = str.slice(3, 5);
+            var dateMonthN = parseInt(dateMonth);
+            var dateYear = str.slice(6, str.length);
+            var dateYearN = parseInt(dateYear);
+            var strDaysN = parseInt(strDays);
+            var newDays = strDaysN + Number;
+            var newStr = newDays + strDateleft;
+            console.log(str + " + " + Number + " = ");
+            if (newDays <= 30) {
+                console.log(newStr);
+            }
+            else if (newDays > 30 && dateMonthN == 12) {
+                newDays = strDaysN + Number - 30;
+                dateMonthN = 1;
+                dateYearN++;
+                console.log(newDays + "." + dateMonthN + "." + dateYearN)
+            }
+            else if (newDays > 30) {
+                newDays = strDaysN + Number - 30;
+                dateMonthN++;
+                console.log(newDays + "." + dateMonthN + "." + dateYear);
+            }
+        }
+        dateDay("15.1.2020");
+
+
+
+    </script>
+
+
+
+-->
+
+
+
+</body>
+
+</html>
