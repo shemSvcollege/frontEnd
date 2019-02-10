@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link rel='stylesheet' href='JavaScript_class10.css' type='text/css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="JavaScript_class10.js"></script>
+</head>
+
+<body>
+    <!--Q1-->
+    <!--  
+    <script>
+        function getAverage(arry){
+        var i;
+        }
+        var num = new Array();
+        
+        num[0] = "5";
+        num[1] = "10";
+        num[2] = "15";
+        num[3] = "20";
+       
+
+// The sum of numbers
+        var sum = 0;
+        for (var i = 0; i < num.length; i++) {
+            sum += parseInt(num[i], 10); 
+        }
+
+        var avg = sum / num.length;
+
+        console.log("The sum of all the numbers is: " + sum + " The average is: " + avg);
+
+    </script>
+-->
+
+    <!--Q2-->
+    <!--
+    <script>
+
+        function sortNumber(a, b) {
+            return b - a; // biggets to smallest
+        }
+
+        var arr = [55, 22, 1425, 12, 78];
+        arr.sort(sortNumber);
+        console.log(arr.join(","));
+
+
+    </script>
+-->
+
+    <!--Q3-->
+    <!--
+    <script>
+    
+    function sameValues(arr1, arr2) {
+            var array1 = arr1;
+            var array2 = arr2;
+            var flag = [];
+            if (array1.length <= array2.length) {
+                for (i = 0; i < array1.length; i++) {
+                    for (j = 0; j < array2.length; j++) {
+                        if (array1[i] == array2[j]) {
+                            flag.push(array1[i]);
+                        }
+                        for (x = 0; x < flag.length; x++) {
+                            for (y = 0; y < x; y++) {
+                                if (flag[x] == flag[y]) {
+                                    flag.pop(flag[y]);
+                                }
+                            }
+                        }
+                    }
+                }
+                console.log(flag)
+            }
+            else if (array1.length > array2.length) {
+                for (j = 0; j < array2.length; j++) {
+                    for (i = 0; i < array1.length; i++) {
+                        if (array2[j] == array1[i]) {
+                            flag.push(array2[j]);
+                        }
+                        for (x = 0; x < flag.length; x++) {
+                            for (y = 0; y < x; y++) {
+                                if (flag[x] == flag[y]) {
+                                    flag.pop(flag[y]);
+                                }
+                            }
+                        }
+                    }
+                }
+                console.log(flag)
+            }
+        }
+        sameValues([1, 2, 1, 2, 1], [2, 2, 2, 1, 3, 1, 2]);
+        
+    </script>
+
+-->
+
+
+    <!--Q4-->
+    <!--
+    <script>
+
+        function CapitalLetter(getMat) {
+            var checkMat = getMat;
+            var capital = 0;
+            for (var i = 0; i < checkMat.length; i++) {
+                for (var j = 0; j < getMat[i].length; j++) {
+                    if ((checkMat[i][j] >= 'A') && (checkMat[i][j] <= 'Z')) {
+                        capital++
+                    }
+                }
+            }
+            console.log(capital)
+        }
+        CapitalLetter([["A", "B", "c", "55", "e", "F"]]);
+
+    </script>
+
+-->
+
+    <!--Q5-->
+
+    
+
+
+
+
+
+    <!--Q5-->
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
